@@ -172,3 +172,58 @@ footer {
     font-size: 0.9rem;
     color: #888;
 }
+/* --- MOBILE RESPONSIVE FIX --- */
+
+@media (max-width: 768px) {
+    /* 1. Navigation - Gagawing column para hindi siksikan */
+    nav {
+        flex-direction: column;
+        padding: 15px;
+        text-align: center;
+    }
+
+    .logo-section {
+        margin-bottom: 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    /* 2. Hero Section - Liliitan ang text para kasya sa screen */
+    .hero {
+        height: 60vh;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem; /* Mas maliit na font para sa CP */
+    }
+
+    .hero-content h2 {
+        font-size: 1rem;
+    }
+
+    /* 3. Sections - Babawasan ang padding */
+    section {
+        padding: 30px 5%;
+    }
+
+    /* 4. Grids - Gagawing 1 column lang para hindi patong-patong */
+    .course-grid, .branch-grid {
+        grid-template-columns: 1fr; /* Isang column na lang paitaas */
+        gap: 15px;
+    }
+
+    .card {
+        height: 120px; /* Mas maiksi para hindi masyadong mahaba ang page */
+    }
+
+    /* 5. Footer - Isang column din */
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+}
